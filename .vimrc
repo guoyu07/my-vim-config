@@ -42,6 +42,10 @@ if version >= 700
   map <C-t> <Esc>:tabnew<CR>
   map <F10> <Esc>:tabclose<CR>
   imap <F10> <Esc>:tabclose<CR>
+  map <F11> <Esc>:set syntax=off<CR>
+  imap <F11> <Esc>:set syntax=off<CR>
+  map <F12> <Esc>:set syntax=on<CR>
+  imap <F12> <Esc>:set syntax=on<CR>
 endif
 
 " Use tabs for buffers

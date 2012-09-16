@@ -53,7 +53,7 @@ search and replace
 :set number
 
 --use "a" to insert at the end of the line and not "i"
-
+-- use Ctrl+[ to exit insert mode and return to normal mode.
 --
  - d is for delete w-word, d line, e -end of word
  - c is for change w-word, d -line , e-end of word - is like d but it goes to insert mode
