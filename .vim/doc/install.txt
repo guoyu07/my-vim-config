@@ -37,7 +37,8 @@ copy / paste:
  - type y (yank) / type d to cut
  - go to the place you want to paste
  - type p
-
+ - paste the last yanked text use "0p or "0P (using the simple p or P will 
+   paste the last deleted item if exists
 search and replace
  - /text
  - CTRL+M to position there
