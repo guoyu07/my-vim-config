@@ -25,3 +25,6 @@
 [submodule ".vim/bundle/xmledit"]
 	path = .vim/bundle/xmledit
 	url = git://github.com/sukima/xmledit.git
+[submodule ".vim/resources/phpm"]
+	path = .vim/resources/phpm
+	url = git://github.com/jimktrains/phpm.git
