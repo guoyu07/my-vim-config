@@ -94,8 +94,10 @@ set showmode  showcmd  cmdheight=2
 "  endif
 "endif
 "syntavti plugin config
-let g:syntastic_phpcs_conf = '--standard=zend'
-
+let g:syntastic_phpcs_conf = '--standard=Zend'
+let g:syntastic_auto_loc_list=1
+let g:syntastic_loc_list_height=5
+let g:syntastic_quiet_warnings=1
 
 if filereadable($HOME . "/.vim/php.vim")
     source ~/.vim/php.vim

@@ -28,3 +28,6 @@
 [submodule ".vim/resources/phpm"]
 	path = .vim/resources/phpm
 	url = git://github.com/jimktrains/phpm.git
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
