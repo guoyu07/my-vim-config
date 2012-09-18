@@ -1,3 +1,4 @@
+call pathogen#infect()
 " Tab key produces 4 spaces, and tab characters are converted to spaces
 set tabstop=4
 set shiftwidth=4
@@ -54,7 +55,7 @@ nnoremap <C-tab>   :bnext<CR>
 
 nmap <F8> :TagbarToggle<CR>
 map <F3> :NERDTreeToggle<CR>
-" insert atgs from ctags
+" insert tags from ctags
 set tags=/projects/tags/j138
 set encoding=utf-8
 " disable swap and backup
@@ -67,7 +68,7 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 set cc=80
 " status line changes
 set showmode  showcmd  cmdheight=2 
-set laststatus=1           " always show statusline 
+"set laststatus=1           " always show statusline 
 " highlight StatusLine NONE ctermbg=DarkGreen ctermfg=White cterm=NONE 
 " if has('statusline')
 "  if version >= 700
@@ -92,8 +93,9 @@ set laststatus=1           " always show statusline
 "    set statusline+=%-6.(%l/%{line('$')},%c%V%)\ %<%P           " position
 "  endif
 "endif
+"syntavti plugin config
+let g:syntastic_phpcs_conf = '--standard=zend'
 
-call pathogen#infect()
 
 if filereadable($HOME . "/.vim/php.vim")
     source ~/.vim/php.vim
