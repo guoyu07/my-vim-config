@@ -1,0 +1,31 @@
+snippet prt
+	echo '<pre>'; print_r($${1}); echo '</pre>';
+snippet here
+	print '<br>Here '.__FILE__.': '.(__LINE__-1).'<br />';
+snippet sq
+	$${1}_query=bx_db_query("SELECT * FROM ".$bx_table_prefix."_ WHERE ");
+	SQL_CHECK(0,__FILE__.':'.(__LINE__-1));
+snippet si
+	bx_db_insert($bx_table_prefix."_${1}"," "," ");
+	SQL_CHECK(0,__FILE__.':'.(__LINE__-1));
+snippet su
+	bx_db_query("UPDATE ".$bx_table_prefix."_${1}");
+	SQL_CHECK(0,__FILE__.':'.(__LINE__-1));
+snippet sd
+	bx_db_query("DELETE FROM ".$bx_table_prefix."_${1}");
+	SQL_CHECK(0,__FILE__.':'.(__LINE__-1));
+snippet sf
+	$${1}_result=bx_db_fetch_array($${2}_query);
+snippet sfw
+	while ($${1}_result=bx_db_fetch_array($${2}_query)) {
+	}
+snippet sn
+	bx_db_num_rows($${1}_query)
+snippet prefix
+	".$bx_table_prefix."${1}
+snippet define
+	define('${1}','${2}');
+snippet bx_url
+	bx_make_url(HTTP_SERVER.FILENAME_${1}, 'auth_sess', $bx_session)
+snippet echocli
+	echo PHP_EOL.$${1}.PHP_EOL;

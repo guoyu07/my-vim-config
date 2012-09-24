@@ -28,19 +28,20 @@ imap <C-z> <Esc>ui
 " redo
 imap <C-y> <Esc><C-R>i
 " save
-map <F2> :w<CR>
-imap <F2> <ESC>:w<CR>i
+"map <F2> :w<CR>
+"imap <F2> <ESC>:w<CR>i
 map <C-s> :w<CR>
-imap <C-s> <ESC>:w<CR>i
+imap <C-s> <ESC>:w<CR>
 " paste in insert mode
 " imap <C-v> <Esc>pi
 " duplicate line
-imap <C-d> <Esc>yypi
+"imap <C-d> <Esc>yypi
+imap <C-d> <Esc>mzyyp`zjli
 " delete line
 imap <C-l> <Esc>ddi
 " close tab
 if version >= 700
-  map <C-t> <Esc>:tabnew<CR>
+"  map <C-t> <Esc>:tabnew<CR>
   map <F10> <Esc>:tabclose<CR>
   imap <F10> <Esc>:tabclose<CR>
   map <F11> <Esc>:set syntax=off<CR>
@@ -52,9 +53,14 @@ endif
 " Use tabs for buffers
 nnoremap <C-S-tab> :bprevious<CR>
 nnoremap <C-tab>   :bnext<CR>
+" Esc in inset mode
+:imap jj <Esc>
 
 nmap <F8> :TagbarToggle<CR>
+"nmap <F9> :SyntasticToggleMode<CR>
 map <F3> :NERDTreeToggle<CR>
+" set pcs to be mapped
+nnoremap \ph :call phpcs#phpcsCheck()<CR>
 " insert tags from ctags
 set tags=/projects/tags/j138
 set encoding=utf-8
@@ -68,36 +74,10 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 set cc=80
 " status line changes
 set showmode  showcmd  cmdheight=2 
-"set laststatus=1           " always show statusline 
-" highlight StatusLine NONE ctermbg=DarkGreen ctermfg=White cterm=NONE 
-" if has('statusline')
-"  if version >= 700
-"    " Fancy status line.
-"    set statusline =
-"    set statusline+=%#User1#                       " highlighting
-"    set statusline+=%n                             " buffer number
-"    set statusline+=%{'/'.bufnr('$')}\             " buffer count
-"    set statusline+=%#User2#                       " highlighting
-"    set statusline+=%f                             " file name
-"    set statusline+=%#User1#                       " highlighting
-"    set statusline+=%h%m%r%w\                      " flags
-"    set statusline+=%{strlen(&ft)?&ft:'none'},     " file type
-"    set statusline+=%{(&fenc==\"\"?&enc:&fenc)},   " encoding
-"    set statusline+=%{((exists(\"+bomb\")\ &&\ &bomb)?\"B,\":\"\")} " BOM
-"    set statusline+=%{&fileformat},                " file format
-"    set statusline+=%{&spelllang},                 " spell language
-"    set statusline+=%=                             " indent right
-"    set statusline+=%#User2#                       " highlighting
-"    set statusline+=%#User1#                       " highlighting
-"    set statusline+=U+%04B\                        " Unicode char under cursor
-"    set statusline+=%-6.(%l/%{line('$')},%c%V%)\ %<%P           " position
-"  endif
-"endif
-"syntavti plugin config
 let g:syntastic_phpcs_conf = '--standard=Zend'
 let g:syntastic_auto_loc_list=1
 let g:syntastic_loc_list_height=5
-let g:syntastic_quiet_warnings=1
+let g:syntastic_quiet_warnings=0
 
 if filereadable($HOME . "/.vim/php.vim")
     source ~/.vim/php.vim

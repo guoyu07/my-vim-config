@@ -11,3 +11,8 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 
 autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+function ShortTabLabel()
+	let filename = expand("%:p:h:t").'\'.expand("%:t")
+	return filename
+endfunction
