@@ -36,7 +36,7 @@ imap <C-s> <ESC>:w<CR>
 " imap <C-v> <Esc>pi
 " duplicate line
 "imap <C-d> <Esc>yypi
-imap <C-d> <Esc>mzyyp`zjli
+imap <C-d> <Esc>mzyyp`z<DOWN><RIGHT>i
 " delete line
 imap <C-l> <Esc>ddi
 " close tab
@@ -61,6 +61,10 @@ nmap <F8> :TagbarToggle<CR>
 map <F3> :NERDTreeToggle<CR>
 " set pcs to be mapped
 nnoremap \ph :call phpcs#phpcsCheck()<CR>
+" copy and move the cursor to the end of selection
+vnoremap gy ygv<Esc>
+" select last pasted text
+nnoremap gp `[v`]
 " insert tags from ctags
 set tags=/projects/tags/j138
 set encoding=utf-8
@@ -73,7 +77,7 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 "over 80 line column show a different background
 set cc=80
 " status line changes
-set showmode  showcmd  cmdheight=2 
+set showmode  showcmd  cmdheight=2
 let g:syntastic_phpcs_conf = '--standard=Zend'
 let g:syntastic_auto_loc_list=1
 let g:syntastic_loc_list_height=5

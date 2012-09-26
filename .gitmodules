@@ -31,3 +31,18 @@
 [submodule ".vim/bundle/nerdcommenter"]
 	path = .vim/bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule ".vim/bundle/vim-powerline"]
+	path = .vim/bundle/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround
+[submodule ".vim/bundle/vim-fugitive"]
+	path = .vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive
+[submodule ".vim/bundle/vim-phpunit"]
+	path = .vim/bundle/vim-phpunit
+	url = git://github.com/docteurklein/vim-phpunit
+[submodule ".vim/bundle/vim-phpdoc"]
+	path = .vim/bundle/vim-phpdoc
+	url = git://github.com/stephpy/vim-phpdoc
